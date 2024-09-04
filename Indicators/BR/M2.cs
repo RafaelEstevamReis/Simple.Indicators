@@ -17,6 +17,7 @@ public class M2
         [3.90M, 3.87M, 3.91M, 3.92M, 3.94M, 4.04M, 4.09M, 4.11M, 4.14M, 4.16M, 4.15M, 4.30M], // 2021
         [4.22M, 4.29M, 4.37M, 4.44M, 4.52M, 4.59M, 4.68M, 4.72M, 4.80M, 4.86M, 4.89M, 5.00M], // 2022 - FEV-JUN indisponível e calculado linearmente
         [5.03M, 5.04M, 5.11M, 5.24M, 5.32M, 5.42M, 5.49M, 5.54M, 5.66M, 5.64M, 5.75M, 5.88M], // 2023
-        [5.86M, 5.88M, 5.96M, 6.03M ], // 2024
+        [5.86M, 5.88M, 5.96M, 6.03M, 6.10M, 6.20M], // 2024
+        // JAN   FEV   MAR   ABR   MAI   JUN   JUL   AGO   SET    OUT   NOV  DEZ
     ];
 }
