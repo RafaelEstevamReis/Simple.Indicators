@@ -2,10 +2,10 @@
 
 using System;
 
-public class IGPM
+public class IGPM : ITable
 {
-    public static readonly int RawData_StartYear = 1990;
-    public static readonly decimal[][] RawData =
+    public int Data_StartYear { get; } = 1990;
+    public decimal[][] Data { get; } =
     [
         [61.46M, 81.29M, 83.95M, 28.35M, 05.93M, 09.94M, 12.01M, 13.62M, 12.80M, 12.97M, 16.86M, 18.00M], // 1990
         [17.70M, 21.02M, 09.19M, 07.81M, 07.48M, 08.48M, 13.22M, 15.25M, 14.93M, 22.63M, 25.62M, 23.63M], // 1991 
@@ -45,7 +45,5 @@ public class IGPM
         [0.07M, -.52M, -.47M, 0.31M, 0.89M, 0.81M, 0.61M, 0.29M, 0.62M, 1.52M, 1.30M, 0.94M],  // 2024
         [0.27M, 1.06M, ], // 2025
         // JAN    FEV    MAR    ABR    MAI    JUN    JUL    AGO    SET    OUT    NOV    DEZ
-
-
     ];
 }

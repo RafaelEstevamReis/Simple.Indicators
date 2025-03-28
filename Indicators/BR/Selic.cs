@@ -2,10 +2,10 @@
 
 using System;
 
-public class Selic
+public class Selic : ITable
 {
-    public static readonly int RawData_StartYear = 2011;
-    public static readonly decimal[][] RawData =
+    public int Data_StartYear { get; } = 2011;
+    public decimal[][] Data { get; } =
     [
         [0.86M, 0.84M, 0.92M, 0.84M, 0.99M, 0.96M, 0.97M, 1.07M, 0.94M, 0.88M, 0.86M, 0.91M], // 2011
         [0.89M, 0.75M, 0.82M, 0.71M, 0.74M, 0.64M, 0.68M, 0.69M, 0.54M, 0.61M, 0.55M, 0.55M], // 2012
@@ -23,6 +23,5 @@ public class Selic
         [0.97M, 0.80M, 0.83M, 0.89M, 0.83M, 0.79M, 0.91M, 0.87M, 0.84M, 0.93M, 0.79M, 0.93M], // 2024
         [1.01M, 0.99M, ], // 2025
         // JAN    FEV    MAR    ABR    MAI    JUN    JUL    AGO    SET    OUT   NOV    DEZ
-
     ];
 }

@@ -2,10 +2,10 @@
 
 using System;
 
-public class M2
+public class M2 : ITable
 {
-    public static readonly int RawData_StartYear = 2014;
-    public static readonly decimal[][] RawData =
+    public int Data_StartYear { get; } = 2014;
+    public decimal[][] Data { get; } =
     [
         [1.97M, 1.99M, 2.00M, 2.02M, 2.00M, 2.06M, 2.07M, 2.05M, 2.11M, 2.12M, 2.15M, 2.19M], // 2014
         [2.16M, 2.17M, 2.18M, 2.18M, 2.19M, 2.20M, 2.21M, 2.21M, 2.23M, 2.25M, 2.27M, 2.33M], // 2015

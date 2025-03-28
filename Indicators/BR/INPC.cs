@@ -2,10 +2,10 @@
 
 using System;
 
-public class INPC
+public class INPC : ITable
 {
-    public static readonly int RawData_StartYear = 1980;
-    public static readonly decimal[][] RawData =
+    public int Data_StartYear { get; } = 1980;
+    public decimal[][] Data { get; } =
     [
         [06.56M, 04.15M, 05.12M, 04.85M, 05.53M, 05.52M, 05.51M, 05.15M, 04.45M, 09.65M, 08.03M, 06.80M], // 1980 
         [06.21M, 06.05M, 05.35M, 06.54M, 05.51M, 05.07M, 06.20M, 06.12M, 05.28M, 04.62M, 05.23M, 05.69M], // 1981

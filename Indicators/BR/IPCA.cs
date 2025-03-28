@@ -2,10 +2,10 @@
 
 using System;
 
-public class IPCA
+public class IPCA : ITable
 {
-    public static readonly int RawData_StartYear = 1980;
-    public static readonly decimal[][] RawData = 
+    public int Data_StartYear { get; } = 1980;
+    public decimal[][] Data { get; } =
     [
         [06.62M, 04.62M, 06.04M, 05.29M, 05.70M, 05.31M, 05.55M, 04.95M, 04.23M, 09.48M, 06.67M, 06.61M], // 1980
         [06.84M, 06.40M, 04.97M, 06.46M, 05.56M, 05.52M, 06.26M, 05.50M, 05.26M, 05.08M, 05.27M, 05.93M], // 1981
@@ -55,8 +55,6 @@ public class IPCA
         [0.42M, 0.83M, 0.16M, 0.38M, 0.46M, 0.21M, 0.38M, -.02M, 0.44M, 0.56M, 0.39M, 0.52M], // 2024
         [0.16M, 1.31M,], // 2025
         // JAN    FEV    MAR    ABR    MAI    JUN    JUL    AGO    SET    OUT    NOV   DEZ
-
-
     ];
 
 
