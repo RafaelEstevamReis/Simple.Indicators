@@ -1,4 +1,4 @@
-﻿namespace Indicators.BR;
+﻿namespace Simple.Indicators.BR;
 
 using System;
 

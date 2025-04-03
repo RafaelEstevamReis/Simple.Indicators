@@ -1,4 +1,4 @@
-﻿namespace Indicators;
+﻿namespace Simple.Indicators;
 
 using System;
 using System.Collections.Generic;

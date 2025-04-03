@@ -1,4 +1,4 @@
-﻿namespace Indicators;
+﻿namespace Simple.Indicators;
 
 public interface ITable
 {
