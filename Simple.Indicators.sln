@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.Indicators", "Indicators\Simple.Indicators.csproj", "{4FDF6925-26B8-46EB-AAB1-AD0B2E7EB398}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Indicators.UnitTest", "Indicators.UnitTest\Indicators.UnitTest.csproj", "{1C9C5F35-FB9E-4C80-B54F-27E6C5552DF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.Indicators.UnitTest", "Indicators.UnitTest\Simple.Indicators.UnitTest.csproj", "{1C9C5F35-FB9E-4C80-B54F-27E6C5552DF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
