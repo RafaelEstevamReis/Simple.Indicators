@@ -4,6 +4,7 @@ using System;
 
 public class IPCA : ITable
 {
+    public DataKind Kind { get; } = DataKind.Relative;
     public int Data_StartYear { get; } = 1980;
     public decimal[][] Data { get; } =
     [

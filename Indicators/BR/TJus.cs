@@ -4,6 +4,7 @@ using System;
 
 public class TJus : ITable
 {
+    public DataKind Kind { get; } = DataKind.Absolute;
     public int Data_StartYear { get; } = 1994;
     public decimal[][] Data { get; } =
     [

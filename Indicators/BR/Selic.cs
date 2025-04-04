@@ -4,6 +4,7 @@ using System;
 
 public class Selic : ITable
 {
+    public DataKind Kind { get; } = DataKind.Relative;
     public int Data_StartYear { get; } = 2011;
     public decimal[][] Data { get; } =
     [

@@ -4,6 +4,7 @@ using System;
 
 public class M2 : ITable
 {
+    public DataKind Kind { get; } = DataKind.Absolute;
     public int Data_StartYear { get; } = 2014;
     public decimal[][] Data { get; } =
     [

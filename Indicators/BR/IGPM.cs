@@ -4,6 +4,7 @@ using System;
 
 public class IGPM : ITable
 {
+    public DataKind Kind { get; } = DataKind.Relative;
     public int Data_StartYear { get; } = 1990;
     public decimal[][] Data { get; } =
     [
