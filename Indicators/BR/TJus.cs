@@ -6,7 +6,9 @@ public class TJus : ITable
 {
     public DataKind Kind { get; } = DataKind.Absolute;
     public int Data_StartYear { get; } = 1994;
-    public decimal[][] Data { get; } =
+    public decimal[][] Data { get; } = _Data;
+
+    static readonly decimal[][] _Data =
     [
         [ 1.0M,       2.0M,       2.8M,       4.2M,       5.8M,       8.4M,      11.346741M, 12.036622M, 12.693821M, 12.885497M, 13.125167M, 13.554359M], // 1994 - Ajustado para não /0
         [13.851199M, 14.082514M, 14.221930M, 14.422459M, 14.699370M, 15.077143M, 15.351547M, 15.729195M, 15.889632M, 16.075540M, 16.300597M, 16.546736M], // 1995

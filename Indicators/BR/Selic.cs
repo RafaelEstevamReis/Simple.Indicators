@@ -6,7 +6,9 @@ public class Selic : ITable
 {
     public DataKind Kind { get; } = DataKind.Relative;
     public int Data_StartYear { get; } = 2011;
-    public decimal[][] Data { get; } =
+    public decimal[][] Data { get; } = _Data;
+
+    static readonly decimal[][] _Data =
     [
         [0.86M, 0.84M, 0.92M, 0.84M, 0.99M, 0.96M, 0.97M, 1.07M, 0.94M, 0.88M, 0.86M, 0.91M], // 2011
         [0.89M, 0.75M, 0.82M, 0.71M, 0.74M, 0.64M, 0.68M, 0.69M, 0.54M, 0.61M, 0.55M, 0.55M], // 2012

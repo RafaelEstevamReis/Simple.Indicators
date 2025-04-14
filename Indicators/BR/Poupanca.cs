@@ -6,7 +6,9 @@ public class Poupanca : ITable
 {
     public DataKind Kind { get; } = DataKind.Relative;
     public int Data_StartYear { get; } = 2013;
-    public decimal[][] Data { get; } =
+    public decimal[][] Data { get; } = _Data;
+
+    static readonly decimal[][] _Data =
     [
         [0.50M, 0.50M, 0.50M, 0.50M, 0.50M, 0.50M, 0.50M, 0.52M, 0.50M, .508M, 0.59M, 0.52M],   // 2013
         [.549M, .613M, .554M, .526M, .546M, .561M, .546M, .606M, 0.56M, .587M, .604M, .548M],   // 2014

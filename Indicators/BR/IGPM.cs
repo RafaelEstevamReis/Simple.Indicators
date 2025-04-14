@@ -6,7 +6,9 @@ public class IGPM : ITable
 {
     public DataKind Kind { get; } = DataKind.Relative;
     public int Data_StartYear { get; } = 1990;
-    public decimal[][] Data { get; } =
+    public decimal[][] Data { get; } = _Data;
+
+    static readonly decimal[][] _Data =
     [
         [61.46M, 81.29M, 83.95M, 28.35M, 05.93M, 09.94M, 12.01M, 13.62M, 12.80M, 12.97M, 16.86M, 18.00M], // 1990
         [17.70M, 21.02M, 09.19M, 07.81M, 07.48M, 08.48M, 13.22M, 15.25M, 14.93M, 22.63M, 25.62M, 23.63M], // 1991 

@@ -1,7 +1,10 @@
 ﻿namespace Indicators.UnitTest;
 
+using Simple.Indicators;
+
 public class FakeDataIndicator : ITable
 {
+    public DataKind Kind => DataKind.Relative;
     public int Data_StartYear { get; } = 2011;
     public decimal[][] Data { get; } =
     [
@@ -9,4 +12,5 @@ public class FakeDataIndicator : ITable
         [ 1.2M, 2.2M, 3.2M, 4.2M, 5.2M, 6.2M, 7.2M, 8.2M, 9.2M, 10.2M, 11.2M, 12.2M], // 2012
         [ 1.3M, 2.3M, 3.3M, 4.3M], // 2013
     ];
+
 }
