@@ -12,6 +12,8 @@ Dados dos Indicadores de Inflação:
 * Selic
 * TJus
 
+Dados Históricos
+* OTRN de 1965 até 1986
 
 ## Uso
 
