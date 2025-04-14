@@ -1,7 +1,6 @@
-﻿namespace Indicators.UnitTest.IndicatorTests;
+﻿namespace Simple.Indicators.UnitTest.IndicatorTests;
 
 using System;
-using Indicators.UnitTest;
 
 public class IndicatorGenericTests
 {

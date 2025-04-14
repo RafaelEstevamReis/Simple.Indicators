@@ -1,4 +1,4 @@
-﻿namespace Indicators.UnitTest;
+﻿namespace Simple.Indicators.UnitTest;
 
 using Simple.Indicators;
 

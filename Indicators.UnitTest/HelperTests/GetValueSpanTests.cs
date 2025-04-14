@@ -1,6 +1,7 @@
-﻿namespace Indicators.UnitTest.HelperTests;
+﻿namespace Simple.Indicators.UnitTest.HelperTests;
 
 using System;
+using Indicators.UnitTest;
 
 public class GetValueSpanTests
 {

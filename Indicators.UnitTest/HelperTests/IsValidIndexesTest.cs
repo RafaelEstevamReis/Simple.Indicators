@@ -1,6 +1,5 @@
-﻿namespace Indicators.UnitTest;
+﻿namespace Simple.Indicators.UnitTest;
 
-using Indicators;
 using Xunit;
 
 public class IsValidIndexesTest
