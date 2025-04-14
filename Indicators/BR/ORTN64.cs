@@ -2,7 +2,7 @@
 
 using System;
 
-public class ORTN : ITable
+public class ORTN64 : ITable
 {
     public DataKind Kind { get; } = DataKind.Absolute;
     public int Data_StartYear { get; } = 1965;
