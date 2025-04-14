@@ -8,7 +8,7 @@ public class IPCA : ITable
     public int Data_StartYear { get; } = 1980;
     public decimal[][] Data { get; } = _Data;
 
-    static readonly decimal[][] _Data =
+    public static readonly decimal[][] _Data =
     [
         [06.62M, 04.62M, 06.04M, 05.29M, 05.70M, 05.31M, 05.55M, 04.95M, 04.23M, 09.48M, 06.67M, 06.61M], // 1980
         [06.84M, 06.40M, 04.97M, 06.46M, 05.56M, 05.52M, 06.26M, 05.50M, 05.26M, 05.08M, 05.27M, 05.93M], // 1981

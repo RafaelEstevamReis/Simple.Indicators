@@ -8,7 +8,7 @@ public class BTN_TR : ITable
     public int Data_StartYear => 1994;
     public decimal[][] Data => _Data;
 
-    static readonly decimal[][] _Data =
+    public static readonly decimal[][] _Data =
     [
         [0.0894M, 0.1264M, 0.1768M, 0.2507M, 0.3660M, 0.5360M, 0.5725M, 0.6013M, 0.6141M, 0.6291M, 0.6451M, 0.6640M], // 1994 - Dados do começo do ano ajustados
         [0.6831M, 0.6974M, 0.7103M, 0.7267M, 0.7519M, 0.7763M, 0.7987M, 0.8226M, 0.8440M, 0.8604M, 0.8746M, 0.8872M], // 1995

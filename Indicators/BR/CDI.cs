@@ -8,7 +8,7 @@ public class CDI : ITable
     public int Data_StartYear { get; } = 1987;
     public decimal[][] Data { get; } = _Data;
 
-    static readonly decimal[][] _Data =
+    public static readonly decimal[][] _Data =
     [
         [13.67M, 21.93M, 13.80M, 15.50M, 25.30M, 18.61M, 09.33M, 08.36M, 08.48M, 10.26M, 13.54M, 13.25M], // 1987
         [16.19M, 17.40M, 16.66M, 19.92M, 18.35M, 19.92M, 24.18M, 20.03M, 25.48M, 27.19M, 24.55M, 29.48M], // 1988
