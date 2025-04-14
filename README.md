@@ -3,6 +3,7 @@
 ## Indicadores Brasileiros
 
 Dados dos Indicadores de Inflação:
+* CDI
 * IGPM
 * INPC
 * IPCA
