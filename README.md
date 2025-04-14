@@ -14,6 +14,7 @@ Dados dos Indicadores de Inflação:
 
 Dados Históricos
 * OTRN de 1965 até 1986
+* OTN de 1986 até 1989
 
 ## Uso
 
