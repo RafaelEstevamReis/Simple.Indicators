@@ -8,7 +8,7 @@ public class GetValueSpanTests
     [Fact]
     public void GetValueSpan_FakeData_SameYearRange()
     {
-        var ind = new FakeDataIndicator();
+        var ind = new FakeDataIndicator_Relative();
 
         var span = Helpers.GetValueSpan(ind, new DateTime(2012, 2, 1), new DateTime(2012, 5, 1));
         Assert.Equal(4, span.Length);
@@ -19,7 +19,7 @@ public class GetValueSpanTests
     [Fact]
     public void GetValueSpan_FakeData_NextYearRange()
     {
-        var ind = new FakeDataIndicator();
+        var ind = new FakeDataIndicator_Relative();
 
         var span = Helpers.GetValueSpan(ind, new DateTime(2012, 2, 1), new DateTime(2013, 4, 1));
         Assert.Equal(15, span.Length);
@@ -30,7 +30,7 @@ public class GetValueSpanTests
     [Fact]
     public void GetValueSpan_FakeData_Range()
     {
-        var ind = new FakeDataIndicator();
+        var ind = new FakeDataIndicator_Relative();
 
         var span = Helpers.GetValueSpan(ind, new DateTime(2011, 8, 1), new DateTime(2013, 2, 1));
         Assert.Equal(19, span.Length);
