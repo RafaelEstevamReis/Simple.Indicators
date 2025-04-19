@@ -21,7 +21,7 @@ public class M2 : ITable
         [4.22M, 4.29M, 4.37M, 4.44M, 4.52M, 4.59M, 4.68M, 4.72M, 4.80M, 4.86M, 4.89M, 5.00M], // 2022 - FEV-JUN indisponível e calculado linearmente
         [5.03M, 5.04M, 5.11M, 5.24M, 5.32M, 5.42M, 5.49M, 5.54M, 5.66M, 5.64M, 5.75M, 5.88M], // 2023
         [5.86M, 5.88M, 5.96M, 6.03M, 6.10M, 6.20M, 6.29M, 6.36M, 6.40M, 6.43M, 6.46M, 6.59M], // 2024
-        [6.54M, ], // 2025
+        [6.54M, 6.64M], // 2025
         // JAN    FEV    MAR    ABR    MAI    JUN    JUL    AGO    SET    OUT    NOV   DEZ
     ];
 }
