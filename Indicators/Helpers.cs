@@ -22,6 +22,10 @@ public class Helpers
 
         return true;
     }
+    /// <summary>
+    /// Obtém array com os dados entre as datas inclusivas
+    /// </summary>
+    /// <exception cref="IndexOutOfRangeException">Data sem dados disponiveis</exception>
     public static decimal[] GetValueSpan(ITable table, DateTime dtI, DateTime dtF)
     {
         var ixStart = GetValueIndexes(table.Data_StartYear, table.Data, dtI);

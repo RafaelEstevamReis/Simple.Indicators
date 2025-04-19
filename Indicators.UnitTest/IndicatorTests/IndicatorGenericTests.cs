@@ -26,4 +26,31 @@ public class IndicatorGenericTests
         Assert.Equal(4, actual.Month);
     }
 
+    [Theory]
+    [InlineData(2012, 1, 1, 0)] // SameMonth
+    [InlineData(2012, 3, 3, 0)] // SameMonth
+    [InlineData(2012, 8, 8, 0)] // SameMonth
+    [InlineData(2012, 1, 2, 2.2)] // NextMonth - Exact value
+    [InlineData(2012, 3, 4, 4.2)] // NextMonth - Exact value
+    [InlineData(2012, 8, 9, 9.2)] // NextMonth - Exact value
+    [InlineData(2012, 1, 12, 79.2)] // 12mo
+    public void TestFakeDataValues_ComputeRangeFor_Relative(int year, int month1, int month2, decimal result)
+    {
+        var actual = Indicator.ComputeRangeFor<FakeDataIndicator_Relative>(new DateTime(year, month1, 1), new DateTime(year, month2, 1));
+        Assert.Equal(result, actual);
+    }
+
+    [Theory]
+    [InlineData(2012, 1, 1, 0)] // SameMonth
+    [InlineData(2012, 3, 3, 0)] // SameMonth
+    [InlineData(2012, 8, 8, 0)] // SameMonth
+    [InlineData(2012, 1, 2, 83.33)] // NextMonth - Exact value
+    [InlineData(2012, 3, 4, 31.25)] // NextMonth - Exact value
+    [InlineData(2012, 8, 9, 12.20)] // NextMonth - Exact value
+    [InlineData(2012, 1, 12, 916.67)] // 12mo
+    public void TestFakeDataValues_ComputeRangeFor_Absolute(int year, int month1, int month2, decimal result)
+    {
+        var actual = Indicator.ComputeRangeFor<FakeDataIndicator_Absolute>(new DateTime(year, month1, 1), new DateTime(year, month2, 1));
+        Assert.Equal(result, actual, 2);
+    }
 }
