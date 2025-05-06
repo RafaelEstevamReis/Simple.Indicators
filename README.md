@@ -22,10 +22,18 @@ Dados Históricos
 
 Valor sempre atualizado:
 ~~~
-Faça Checkout das tabelas deste repositório dentro da sua aplicação e atualize automaticamente
+Faça Checkout das tabelas deste repositório dentro da sua aplicação, tenha sempre atualizado e use como quiser
 ~~~
 
-ou Instale via [NuGet](https://www.nuget.org/packages/Simple.Indicators/):
+ou Instale via [NuGet](https://www.nuget.org/packages/Simple.Indicators/) e utilize todas as funções da biblioteca
 ~~~
 PM> NuGet\Install-Package Simple.Indicators
 ~~~
+
+Versão do Pacote:
+> a.b.c.d
+
+* a. Versão principal da biblioteca
+* b. Ano da tabela
+* c. Mês da tabela
+* d. Revisão, de tabela ou da biblioteca
