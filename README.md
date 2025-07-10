@@ -3,15 +3,15 @@
 ## Indicadores Brasileiros
 
 Dados dos Indicadores de Inflação:
-* BTN-TR
-* CDI
-* IGPM
-* INPC
-* IPCA
-* M2
-* Poupança
-* Selic
-* TJus
+* BTN-TR: desde 1994
+* CDI: desde 1987
+* IGPM: desde 1990
+* INPC: desde 1980
+* IPCA: desde 1980
+* M2: desde 2002
+* Poupança: desde 2013
+* Selic: desde 2011
+* TJus: desde 1994
 
 Dados Históricos
 * OTRN de 1965 até 1986
