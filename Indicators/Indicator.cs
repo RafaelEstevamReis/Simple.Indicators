@@ -84,4 +84,19 @@ public static class Indicator
         }
         else throw new InvalidOperationException("Unsupported DataKind.");
     }
+
+    /// <summary>
+    /// Corrige um valor com o indicador escolhido para as datas
+    /// </summary>
+    /// <typeparam name="T">Indicador</typeparam>
+    /// <param name="dtI">Data Inicial</param>
+    /// <param name="dtF">Data final</param>
+    /// <param name="value">Valor a ser corrigido</param>
+    /// <returns>Valor corrigido no período</returns>
+    public static decimal AdjustValueWith<T>(DateTime dtI, DateTime dtF, decimal value)
+         where T : ITable, new()
+    {
+        var variation = ComputeRangeFor<T>(dtI, dtF);
+        return (1 + (variation / 100)) * value;
+    }
 }
