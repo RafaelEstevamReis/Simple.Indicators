@@ -33,11 +33,11 @@ public class M2 : ITable
         [4.2063M, 4.2710M, 4.3709M, 4.4371M, 4.5284M, 4.6280M, 4.6893M, 4.7789M, 4.8601M, 4.8656M, 4.9609M, 5.1055M], // 2022
         [5.0340M, 5.0940M, 5.2271M, 5.2561M, 5.3330M, 5.4335M, 5.4810M, 5.5810M, 5.6437M, 5.6895M, 5.7586M, 5.9046M], // 2023
         [5.8412M, 5.8678M, 5.9695M, 6.0102M, 6.1015M, 6.2411M, 6.2983M, 6.3613M, 6.3726M, 6.4183M, 6.4981M, 6.6584M], // 2024
-        [6.5770M, 6.6450M, 6.6867M, 6.7651M, 6.8546M] // 2025
+        [6.5440M, 6.6512M, 6.6688M, 6.7748M, 6.8829M, 6.8889M] // 2025
         //   JAN      FEV      MAR      ABR      MAI      JUN      JUL      AGO      SET      OUT      NOV      DEZ
     ];
 
-    // Desconfio que o site do BCB esteja alterando valores fora da anualidade, vou "colar" abaixo os valores para acesso na data
+    // O site do BCB altera valores fora da anualidade, vou "colar" abaixo os valores para acesso na data
     // Histórico:
 
     // > 2025-06-10 às 10h22
@@ -46,6 +46,9 @@ public class M2 : ITable
     // > 2025-07-03 às 10h10
     //  // Código SGS	dez/2024	jan/2025	fev/2025	mar/2025	abr/2025	mai/2025
     //  // 27810    	6.658.393	6.544.050	6.644.991	6.686.758	6.765.154	6.854.638
+    // > 2025-08-01 às 11h56
+    //  // Código SGS	jan/2025	fev/2025	mar/2025	abr/2025	mai/2025	jun/2025
+    //  // 27810	    6.544.050	6.651.269	6.688.154	6.774.888	6.882.925	6.888.947
 
 
 }
