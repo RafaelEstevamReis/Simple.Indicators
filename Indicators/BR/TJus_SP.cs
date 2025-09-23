@@ -2,7 +2,7 @@
 
 using System;
 
-public class TJus : ITable
+public class TJus_SP : ITable
 {
     public DataKind Kind { get; } = DataKind.Absolute;
     public int Data_StartYear { get; } = 1994;
