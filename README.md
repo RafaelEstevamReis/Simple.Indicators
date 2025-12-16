@@ -6,6 +6,7 @@
 
 Dados dos Indicadores de Inflação:
 * BTN-TR: desde 1994
+* IBC-Br: desde 2003
 * CDI: desde 1987
 * IGPM: desde 1990
 * INPC: desde 1980
