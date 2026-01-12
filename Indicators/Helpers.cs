@@ -64,4 +64,13 @@ public class Helpers
 
         return lstItems.ToArray();
     }
+    public static decimal CalculatePercentVariation(decimal[] values)
+    {
+        decimal accum = 1;
+        foreach (var v in values)
+        {
+            accum = accum * (1 + (v / 100));
+        }
+        return accum;
+    }
 }
