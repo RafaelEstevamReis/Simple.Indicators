@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public class Helpers
+public class DataHelpers
 {
     public static (int, int) GetValueIndexes(int startYear, decimal[][] table, DateTime dtRef)
     {

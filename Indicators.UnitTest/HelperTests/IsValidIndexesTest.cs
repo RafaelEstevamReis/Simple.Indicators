@@ -17,7 +17,7 @@ public class IsValidIndexesTest
         int ixMonth = 1;
 
         // Act
-        bool result = Helpers.IsValidIndexes(ixYear, ixMonth, table);
+        bool result = DataHelpers.IsValidIndexes(ixYear, ixMonth, table);
 
         // Assert
         Assert.True(result);
@@ -36,7 +36,7 @@ public class IsValidIndexesTest
         int ixMonth = 0;
 
         // Act
-        bool result = Helpers.IsValidIndexes(ixYear, ixMonth, table);
+        bool result = DataHelpers.IsValidIndexes(ixYear, ixMonth, table);
 
         // Assert
         Assert.True(result);
@@ -54,7 +54,7 @@ public class IsValidIndexesTest
         int ixMonth = 0;
 
         // Act
-        bool result = Helpers.IsValidIndexes(ixYear, ixMonth, table);
+        bool result = DataHelpers.IsValidIndexes(ixYear, ixMonth, table);
 
         // Assert
         Assert.False(result);
@@ -72,7 +72,7 @@ public class IsValidIndexesTest
         int ixMonth = -1;
 
         // Act
-        bool result = Helpers.IsValidIndexes(ixYear, ixMonth, table);
+        bool result = DataHelpers.IsValidIndexes(ixYear, ixMonth, table);
 
         // Assert
         Assert.False(result);
@@ -90,7 +90,7 @@ public class IsValidIndexesTest
         int ixMonth = 0;
 
         // Act
-        bool result = Helpers.IsValidIndexes(ixYear, ixMonth, table);
+        bool result = DataHelpers.IsValidIndexes(ixYear, ixMonth, table);
 
         // Assert
         Assert.False(result);
@@ -108,7 +108,7 @@ public class IsValidIndexesTest
         int ixMonth = 1;
 
         // Act
-        bool result = Helpers.IsValidIndexes(ixYear, ixMonth, table);
+        bool result = DataHelpers.IsValidIndexes(ixYear, ixMonth, table);
 
         // Assert
         Assert.False(result);
@@ -127,7 +127,7 @@ public class IsValidIndexesTest
         int ixMonth = 1;
 
         // Act
-        bool result = Helpers.IsValidIndexes(ixYear, ixMonth, table);
+        bool result = DataHelpers.IsValidIndexes(ixYear, ixMonth, table);
 
         // Assert
         Assert.True(result);

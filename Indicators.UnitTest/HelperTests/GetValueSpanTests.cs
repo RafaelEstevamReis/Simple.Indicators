@@ -10,7 +10,7 @@ public class GetValueSpanTests
     {
         var ind = new FakeDataIndicator_Relative();
 
-        var span = Helpers.GetValueSpan(ind, new DateTime(2012, 2, 1), new DateTime(2012, 5, 1));
+        var span = DataHelpers.GetValueSpan(ind, new DateTime(2012, 2, 1), new DateTime(2012, 5, 1));
         Assert.Equal(4, span.Length);
         Assert.Equal(2.2M, span[0]);
         Assert.Equal(5.2M, span[3]);
@@ -21,7 +21,7 @@ public class GetValueSpanTests
     {
         var ind = new FakeDataIndicator_Relative();
 
-        var span = Helpers.GetValueSpan(ind, new DateTime(2012, 2, 1), new DateTime(2013, 4, 1));
+        var span = DataHelpers.GetValueSpan(ind, new DateTime(2012, 2, 1), new DateTime(2013, 4, 1));
         Assert.Equal(15, span.Length);
         Assert.Equal(2.2M, span[0]);
         Assert.Equal(4.3M, span[14]);
@@ -32,7 +32,7 @@ public class GetValueSpanTests
     {
         var ind = new FakeDataIndicator_Relative();
 
-        var span = Helpers.GetValueSpan(ind, new DateTime(2011, 8, 1), new DateTime(2013, 2, 1));
+        var span = DataHelpers.GetValueSpan(ind, new DateTime(2011, 8, 1), new DateTime(2013, 2, 1));
         Assert.Equal(19, span.Length);
         Assert.Equal(8.1M, span[0]);
         Assert.Equal(2.3M, span[18]);

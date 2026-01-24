@@ -16,8 +16,8 @@ public static class Indicator
 
         if (ind.Data_StartYear > dtRef.Year) throw new IndexOutOfRangeException($"Data for `{ind.GetType().Name}` available after {ind.Data_StartYear}");
 
-        var ixs = Helpers.GetValueIndexes(ind.Data_StartYear, ind.Data, dtRef);
-        if (!Helpers.IsValidIndexes(ixs.Item1, ixs.Item2, ind.Data))
+        var ixs = DataHelpers.GetValueIndexes(ind.Data_StartYear, ind.Data, dtRef);
+        if (!DataHelpers.IsValidIndexes(ixs.Item1, ixs.Item2, ind.Data))
         {
             var maxDate = GetMaxDateFor<T>();
             throw new IndexOutOfRangeException($"Unavailable data for {dtRef:yyyy-MM}, Max date: `{maxDate:yyyy-MM}`");
@@ -67,7 +67,7 @@ public static class Indicator
         // 2. Do mês [A] para o mês seguinte, taxa do mês A
 
         var ind = new T();
-        decimal[] values = Helpers.GetValueSpan(ind, dtI, dtF);
+        decimal[] values = DataHelpers.GetValueSpan(ind, dtI, dtF);
 
         if (ind.Kind == DataKind.Absolute)
         {
