@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.Indicators", "Indica
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.Indicators.UnitTest", "Indicators.UnitTest\Simple.Indicators.UnitTest.csproj", "{1C9C5F35-FB9E-4C80-B54F-27E6C5552DF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Indicators.API", "Simple.Indicator.API\Simple.Indicators.API.csproj", "{7BB8B9D0-2025-4E37-9042-C5E9693364BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1C9C5F35-FB9E-4C80-B54F-27E6C5552DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C9C5F35-FB9E-4C80-B54F-27E6C5552DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C9C5F35-FB9E-4C80-B54F-27E6C5552DF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB8B9D0-2025-4E37-9042-C5E9693364BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB8B9D0-2025-4E37-9042-C5E9693364BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB8B9D0-2025-4E37-9042-C5E9693364BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB8B9D0-2025-4E37-9042-C5E9693364BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
