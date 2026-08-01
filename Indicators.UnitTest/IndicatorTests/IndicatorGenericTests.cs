@@ -33,11 +33,11 @@ public class IndicatorGenericTests
     [InlineData(2012, 1, 2, 2.2)] // NextMonth - Exact value
     [InlineData(2012, 3, 4, 4.2)] // NextMonth - Exact value
     [InlineData(2012, 8, 9, 9.2)] // NextMonth - Exact value
-    [InlineData(2012, 1, 12, 79.2)] // 12mo
+    [InlineData(2012, 1, 12, 113.8270)] // 12mo - capitalizado (a soma simples daria 79.2)
     public void TestFakeDataValues_ComputeRangeFor_Relative(int year, int month1, int month2, decimal result)
     {
         var actual = Indicator.ComputeRangeFor<FakeDataIndicator_Relative>(new DateTime(year, month1, 1), new DateTime(year, month2, 1));
-        Assert.Equal(result, actual);
+        Assert.Equal(result, actual, 4);
     }
 
     [Theory]
