@@ -33,6 +33,11 @@ namespace Simple.Indicators.API.Controllers
             var table = TableHelper.GetTableByName(tableName);
             if (table == null) return NotFound("Table not found");
 
+            if (!DataHelpers.IsValidRange(firstMonth, lastMonth))
+            {
+                return BadRequest($"firstMonth ({firstMonth:yyyy-MM}) must not be after lastMonth ({lastMonth:yyyy-MM})");
+            }
+
             var data = DataHelpers.GetValueSpan(table, firstMonth, lastMonth);
 
             return Ok(new TableData
