@@ -102,9 +102,15 @@ public static class Indicator
         }
         else if (ind.Kind == DataKind.Relative)
         {
-            // Descarta o primeiro: o mês inicial é excludente
-            return values.Skip(1)
-                         .Sum();
+            // Taxas mensais capitalizam: o acumulado é o produto, não a soma.
+            // Descarta o primeiro: o mês inicial é excludente.
+            decimal accum = 1M;
+            for (int i = 1; i < values.Length; i++)
+            {
+                accum *= 1 + (values[i] / 100);
+            }
+
+            return (accum - 1) * 100;
         }
         else throw new InvalidOperationException("Unsupported DataKind.");
     }
