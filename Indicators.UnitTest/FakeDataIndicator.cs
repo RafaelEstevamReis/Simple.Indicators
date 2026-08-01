@@ -21,3 +21,32 @@ public class FakeDataIndicator_Absolute : ITable
     public int Data_StartYear { get; } = 2011;
     public decimal[][] Data => FakeDataIndicator_Relative._Data;
 }
+
+/// <summary>Último ano sem meses preenchidos</summary>
+public class FakeDataIndicator_EmptyLastYear : ITable
+{
+    public DataKind Kind => DataKind.Relative;
+    public int Data_StartYear { get; } = 2011;
+    public decimal[][] Data { get; } =
+    [
+        [ 1.1M, 2.1M, 3.1M], // 2011
+        [], // 2012
+    ];
+}
+/// <summary>Tabela sem nenhum ano</summary>
+public class FakeDataIndicator_NoData : ITable
+{
+    public DataKind Kind => DataKind.Relative;
+    public int Data_StartYear { get; } = 2011;
+    public decimal[][] Data { get; } = [];
+}
+/// <summary>Absoluto com valor base zerado</summary>
+public class FakeDataIndicator_ZeroBase : ITable
+{
+    public DataKind Kind => DataKind.Absolute;
+    public int Data_StartYear { get; } = 2011;
+    public decimal[][] Data { get; } =
+    [
+        [ 0M, 1M, 2M], // 2011
+    ];
+}
