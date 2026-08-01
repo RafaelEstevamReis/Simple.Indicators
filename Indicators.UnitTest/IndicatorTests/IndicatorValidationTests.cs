@@ -85,4 +85,38 @@ public class IndicatorValidationTests
         Assert.Throws<IndexOutOfRangeException>(()
             => Indicator.GetValueFor<FakeDataIndicator_NoData>(new DateTime(2011, 1, 1)));
     }
+
+    /// <summary>
+    /// Capitalização é composicional: quebrar o intervalo não pode mudar o resultado.
+    /// A soma simples violava isso em R$ 18,02 nesta janela.
+    /// </summary>
+    [Fact]
+    public void AdjustValueWith_IPCA_IsChainConsistent()
+    {
+        var inicio = new DateTime(2019, 12, 1);
+        var meio = new DateTime(2022, 6, 1);
+        var fim = new DateTime(2024, 12, 1);
+
+        var direto = Indicator.AdjustValueWith<IPCA>(inicio, fim, 1000M);
+        var emEtapas = Indicator.AdjustValueWith<IPCA>(meio, fim,
+                       Indicator.AdjustValueWith<IPCA>(inicio, meio, 1000M));
+
+        Assert.Equal(direto, emEtapas, 8);
+    }
+
+    /// <summary>
+    /// ComputeRangeFor tem que concordar com CalculatePercentVariation, que já é a base
+    /// dos testes de acumulado anual.
+    /// </summary>
+    [Fact]
+    public void ComputeRangeFor_IPCA_AgreesWithCalculatePercentVariation()
+    {
+        var span = DataHelpers.GetValueSpan(new IPCA(), new DateTime(2025, 1, 1), new DateTime(2025, 12, 1));
+        var helper = (DataHelpers.CalculatePercentVariation(span) - 1) * 100;
+
+        var actual = Indicator.ComputeRangeFor<IPCA>(new DateTime(2024, 12, 1), new DateTime(2025, 12, 1));
+
+        Assert.Equal(helper, actual, 10);
+        Assert.Equal(4.2644M, Math.Round(actual, 4));
+    }
 }
