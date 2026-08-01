@@ -5,8 +5,8 @@ using System;
 
 public class Accumulated12m2025Tests
 {
-    static DateTime Start = new DateTime(2025, 1, 1);
-    static DateTime End = new DateTime(2025, 12, 31);
+    static readonly DateTime Start = new(2025, 1, 1);
+    static readonly DateTime End = new(2025, 12, 31);
 
     [Fact]
     public void Accumulated12m2025_BR_CDI()

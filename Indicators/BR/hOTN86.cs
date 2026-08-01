@@ -7,7 +7,9 @@ public class hOTN86 : ITable
     public DataKind Kind { get; } = DataKind.Absolute;
     public int Data_StartYear { get; } = 1986;
 
-    public decimal[][] Data { get; } =
+    public decimal[][] Data { get; } = _Data;
+
+    public static readonly decimal[][] _Data =
     [
         [ 80.047M, 96.039M, 106.40M, 106.40M, 106.40M, 106.40M, 106.40M, 106.40M, 106.40M, 106.40M, 106.40M, 106.40M], // 1986
         [ 106.40M, 106.40M, 181.61M, 207.97M, 251.56M, 310.53M, 366.49M, 377.67M, 401.69M, 424.51M, 463.48M, 522.99M], // 1987

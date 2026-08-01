@@ -7,7 +7,9 @@ public class hBTN89 : ITable
     public DataKind Kind { get; } = DataKind.Absolute;
     public int Data_StartYear { get; } = 1989;
 
-    public decimal[][] Data { get; } =
+    public decimal[][] Data { get; } = _Data;
+
+    public static readonly decimal[][] _Data =
     [
         [ 1.0000M, 1.0000M, 1.0360M, 1.0991M, 1.1794M, 1.2966M, 1.6186M, 2.0842M, 2.6956M, 3.6647M, 5.0434M, 7.1324M], // 1989
         [10.9518M,17.0968M,29.5399M,41.7340M,41.7340M,43.9793M,48.2057M,53.4071M,59.0576M,66.6485M,75.7837M,88.3941M], // 1990

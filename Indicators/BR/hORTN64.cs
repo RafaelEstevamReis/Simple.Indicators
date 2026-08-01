@@ -7,7 +7,9 @@ public class hORTN64 : ITable
     public DataKind Kind { get; } = DataKind.Absolute;
     public int Data_StartYear { get; } = 1965;
 
-    public decimal[][] Data { get; } =
+    public decimal[][] Data { get; } = _Data;
+
+    public static readonly decimal[][] _Data =
     [
         [  11.30M,  11.30M,  11.30M,  13.40M,  13.40M,  13.40M,  15.20M,  15.20M,  15.70M,  15.90M,  16.05M,  16.30M], // 1965
         [  16.36M,  17.05M,  17.30M,  17.60M,  18.28M,  19.09M,  18.87M,  20.43M,  21.10M,  21.61M,  22.18M,  22.60M], // 1966
