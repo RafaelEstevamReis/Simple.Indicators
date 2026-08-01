@@ -37,4 +37,15 @@ public class GetValueSpanTests
         Assert.Equal(8.1M, span[0]);
         Assert.Equal(2.3M, span[18]);
     }
+
+    [Fact]
+    public void GetValueSpan_FakeData_InvertedRange_Throws()
+    {
+        var ind = new FakeDataIndicator_Relative();
+
+        Assert.Throws<ArgumentException>(()
+            => DataHelpers.GetValueSpan(ind, new DateTime(2012, 5, 1), new DateTime(2012, 2, 1)));
+        Assert.Throws<ArgumentException>(()
+            => DataHelpers.GetValueSpan(ind, new DateTime(2013, 1, 1), new DateTime(2012, 1, 1)));
+    }
 }
