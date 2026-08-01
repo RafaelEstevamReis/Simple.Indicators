@@ -23,11 +23,26 @@ public class DataHelpers
         return true;
     }
     /// <summary>
+    /// Verifica se a data inicial não é posterior à final (não considera dias)
+    /// </summary>
+    public static bool IsValidRange(DateTime dtI, DateTime dtF)
+    {
+        if (dtI.Year != dtF.Year) return dtI.Year < dtF.Year;
+
+        return dtI.Month <= dtF.Month;
+    }
+    /// <summary>
     /// Obtém array com os dados entre as datas inclusivas
     /// </summary>
+    /// <exception cref="ArgumentException">Data inicial posterior à data final</exception>
     /// <exception cref="IndexOutOfRangeException">Data sem dados disponiveis</exception>
     public static decimal[] GetValueSpan(ITable table, DateTime dtI, DateTime dtF)
     {
+        if (!IsValidRange(dtI, dtF))
+        {
+            throw new ArgumentException($"Initial date {dtI:yyyy-MM} is after final date {dtF:yyyy-MM}", nameof(dtI));
+        }
+
         var ixStart = GetValueIndexes(table.Data_StartYear, table.Data, dtI);
         if (!IsValidIndexes(ixStart.Item1, ixStart.Item2, table.Data))
         {
